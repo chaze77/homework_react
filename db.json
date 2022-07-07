@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "title": "fefef",
+      "description": "efef",
+      "price": 0,
+      "image": "fefefe",
+      "id": 1
+    },
+    {
+      "title": "9999",
+      "description": "2222",
+      "price": 3333999,
+      "image": "777",
+      "id": 2
+    },
+    {
+      "title": "eee",
+      "description": "qqq999",
+      "price": 777999555,
+      "image": "www999777",
+      "id": 3
+    },
+    {
+      "title": "1111",
+      "description": "3333",
+      "price": "22222",
+      "image": "https://nishman.ru/wp-content/uploads/2020/11/Nishman_Shampoo_5000_ml.png",
+      "id": 4
+    }
+  ]
+}
