@@ -5,14 +5,14 @@ export const productsContext = React.createContext();
 
 const INIT_STATE = {
   products: [],
-  oneProduct: null
+  oneProduct: null,
 };
 
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
-      case "GET_ONE":
+    case "GET_ONE":
       return { ...state, oneProduct: action.payload };
     default:
       return state;
@@ -30,37 +30,37 @@ const ProductsContextProvider = ({ children }) => {
     getProducts();
   }
 
-//! Read
-async function getProducts() {
-  const res = await axios(PRODUCTS_API);
-  console.log(res);
-  dispatch({
-    type: "GET_PRODUCTS",
-    payload: res.data,
-  });
-}
+  //! Read
+  async function getProducts() {
+    const res = await axios(PRODUCTS_API);
+    console.log(res);
+    dispatch({
+      type: "GET_PRODUCTS",
+      payload: res.data,
+    });
+  }
 
-//! Delete
-async function deleteProduct(id) {
-    await axios.delete(`${PRODUCTS_API}/${id}`)
-    getProducts()
-}
+  //! Delete
+  async function deleteProduct(id) {
+    await axios.delete(`${PRODUCTS_API}/${id}`);
+    getProducts();
+  }
 
-//! Details, Get for edit
-async function getOneProduct(id) {
-  const res = await axios(`${PRODUCTS_API}/${id}`);
-  dispatch({
-    type: "GET_ONE",
-    payload: res.data,
-  });
-}
-//! Update
-async function updateProduct(id, editedProduct) {
-  await axios.patch(`${PRODUCTS_API}/${id}`, editedProduct);
-getProducts()
-}
+  //! Details, Get for edit
+  async function getOneProduct(id) {
+    const res = await axios(`${PRODUCTS_API}/${id}`);
+    dispatch({
+      type: "GET_ONE",
+      payload: res.data,
+    });
+  }
+  //! Update
+  async function updateProduct(id, editedProduct) {
+    await axios.patch(`${PRODUCTS_API}/${id}`, editedProduct);
+    getProducts();
+  }
 
-return (
+  return (
     <productsContext.Provider
       value={{
         products: state.products,
@@ -69,13 +69,11 @@ return (
         getProducts,
         deleteProduct,
         getOneProduct,
-        updateProduct    
-      }}
-    >
+        updateProduct,
+      }}>
       {children}
     </productsContext.Provider>
   );
-
 };
 
 export default ProductsContextProvider;

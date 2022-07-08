@@ -1,32 +1,39 @@
 {
   "products": [
     {
-      "title": "fefef",
-      "description": "efef",
-      "price": 0,
-      "image": "fefefe",
+      "title": "asd",
+      "description": "dsa",
+      "price": 777999,
+      "image": "adsd",
       "id": 1
     },
     {
-      "title": "9999",
-      "description": "2222",
-      "price": 3333999,
-      "image": "777",
+      "title": "dsgfd",
+      "description": "sfg",
+      "price": "333",
+      "image": "asd",
       "id": 2
     },
     {
-      "title": "eee",
-      "description": "qqq999",
-      "price": 777999555,
-      "image": "www999777",
+      "title": "fds",
+      "description": "sdf",
+      "price": "444",
+      "image": "dsa",
       "id": 3
     },
     {
-      "title": "1111",
-      "description": "3333",
-      "price": "22222",
-      "image": "https://nishman.ru/wp-content/uploads/2020/11/Nishman_Shampoo_5000_ml.png",
+      "title": "dsa",
+      "description": "sdf",
+      "price": "55",
+      "image": "dsa",
       "id": 4
+    },
+    {
+      "title": "dgfg",
+      "description": "dsf",
+      "price": "111",
+      "image": "asd",
+      "id": 5
     }
   ]
 }
