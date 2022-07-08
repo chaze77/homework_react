@@ -453,9 +453,23 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 25px;
+  margin: 100px;  
+}
+.productlist_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   
 }
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+
 .productcard {
     width: 30%;
     display: flex;
@@ -538,6 +552,12 @@ font-size: medium;
 .contacts__info {
   display: flex;
   flex-direction: column;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border: white 1px solid;
 }
 
 

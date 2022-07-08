@@ -27,6 +27,27 @@
       "price": "22222",
       "image": "https://nishman.ru/wp-content/uploads/2020/11/Nishman_Shampoo_5000_ml.png",
       "id": 4
+    },
+    {
+      "title": "Ахматбекова",
+      "description": "Ажар",
+      "price": 558109106,
+      "image": "daniyar",
+      "id": 5
+    },
+    {
+      "title": "zxc",
+      "description": "dsfsdf",
+      "price": "4444",
+      "image": "zxc",
+      "id": 6
+    },
+    {
+      "title": "ШАМПУНЬ ДЛЯ ВОЛОС NISHMAN 03 INCA INCHI",
+      "description": "1250 мл",
+      "price": "1000",
+      "image": "https://nishman.ru/wp-content/uploads/2021/02/Nishman_Sulfat_Free_Shampoo_3_1250_ml-768x768.png",
+      "id": 7
     }
   ]
 }
