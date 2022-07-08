@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contacts";
@@ -13,7 +12,6 @@ import ProductsList from "./pages/ProductList";
 import EditProduct from "./pages/EditProduct";
 import Details from "./pages/Details";
 
-
 const Routing = () => {
   return (
     <Routes>
@@ -22,8 +20,8 @@ const Routing = () => {
       <Route path="/about" element={<About />} />
       <Route path="/contacts" element={<Contact />} />
       <Route path="/cart" element={<Cart />} />
-      {/* <Route path="/*" element={<NotFound />} /> */}
-      <Route path="/products" element={<ProductCard/>} />
+
+      <Route path="/products" element={<ProductCard />} />
       <Route path="/list" element={<ProductsList />} />
       <Route path="/edit/:id" element={<EditProduct />} />
       <Route path="/details/:id" element={<Details />} />
