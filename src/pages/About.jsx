@@ -25,8 +25,7 @@ const About = () => {
               controls="controls"
               autoPlay
               className="about__main__video"
-              src="https://nishman.ru/wp-content/uploads/2021/02/Nishman_Promo.mp4"
-            ></video>
+              src="https://nishman.ru/wp-content/uploads/2021/02/Nishman_Promo.mp4"></video>
           </div>
           <div className="about__right">
             <img
@@ -45,6 +44,7 @@ const About = () => {
               <br /> весь мир».
             </span>
             <img
+              className="img_nishman_icon"
               style={{
                 maxWidth: "300px",
                 maxHeight: "200px",
