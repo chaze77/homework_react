@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import ProductCard from "../components/ProductCard/ProductCard";
+import ProductCard from "./ProductCard";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -10,13 +10,13 @@ const Home = () => {
   }
 
   function handleContacts() {
-   navigate("/contacts")
+    navigate("/contacts");
   }
 
   return (
     <section className="home">
       <div className="container">
-         <div className="invicible"></div>
+        <div className="invicible"></div>
         <div className="home__img">
           <div className="home__title">
             <span style={{ color: "black" }}>NISHMAN.</span>
@@ -39,12 +39,13 @@ const Home = () => {
             всегда хорошо.
             <br /> Вы достойны только лучшего!
           </p>
-          </div>
-          <div className="home__footer">
-            <p>CВЯЖИТЕСЬ С НАМИ, ЕСЛИ ВАМ ИНТЕРЕСНЫ ПРОДУКТЫ NISHMAN</p>
-            <button className="home__footer__btn" onClick={handleContacts}>СВЯЗАТЬСЯ</button>
-          </div>
-       
+        </div>
+        <div className="home__footer">
+          <p>CВЯЖИТЕСЬ С НАМИ, ЕСЛИ ВАМ ИНТЕРЕСНЫ ПРОДУКТЫ NISHMAN</p>
+          <button className="home__footer__btn" onClick={handleContacts}>
+            СВЯЗАТЬСЯ
+          </button>
+        </div>
       </div>
     </section>
   );
