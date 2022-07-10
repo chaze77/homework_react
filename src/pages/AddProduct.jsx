@@ -28,16 +28,9 @@ const AddProduct = () => {
   }
 
   return (
-    <section className="addproduct">
+    <section>
       <div className="container">
-        <div className="addproduct_inp">
-          {/* <h1>AddProduct</h1>
-                 <input className='inp' type="text" placeholder='image' onChange={e => setImage(e.target.value)}/>
-                 <input className='inp' type="text" placeholder='title' onChange={e => setTitle(e.target.value)}/>
-                 <input className='inp' type="text" placeholder='price' onChange={e => setPrice(e.target.value)}/>
-                 <input className='inp' type="text" placeholder='description' onChange={e => setDescription(e.target.value)}/>
-                 
-                 <button onClick={handleSave}>Save</button> */}
+        <div className="addproduct">
           <div className="form">
             <div className="subtitle">Let's create your product!</div>
             <div className="input-container ic1">
@@ -72,7 +65,7 @@ const AddProduct = () => {
                 className="input"
                 type="text"
                 placeholder=" "
-                onChange={e => setPrice(+e.target.value)}
+                onChange={e => setPrice(e.target.value)}
               />
               <div className="cut cut-short"></div>
               <label for="email" className="placeholder">
@@ -96,6 +89,7 @@ const AddProduct = () => {
               submit
             </button>
           </div>
+          {/* </div> */}
         </div>
       </div>
     </section>
