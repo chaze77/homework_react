@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import ProductCard from "../components/ProductCard/ProductCard";
+import ProductCard from "./ProductCard";
 import { productsContext } from "../Context/ProductsContext";
 import { Link, useSearchParams } from "react-router-dom";
 import { Box, Pagination, TextField } from "@mui/material";
@@ -21,6 +21,11 @@ const ProductsList = () => {
     searchParams.get("_page") ? +searchParams.get("_page") : 1
   );
 
+  const [price, setPrice] = useState([1, 100000]);
+  useEffect(() => {
+    getProducts();
+  }, []);
+
   useEffect(() => {
     setSearchParams({ q: search, _page: currentPage, _limit: 3 });
   }, [search, currentPage]);
@@ -28,6 +33,16 @@ const ProductsList = () => {
   useEffect(() => {
     getProducts();
   }, [searchParams]);
+
+  useEffect(() => {
+    setSearchParams({
+      q: search,
+      _page: currentPage,
+      _limit: 3,
+      price_gte: price[0], //g - greater, e - equal
+      price_lte: price[1], //l - less, e - equal
+    });
+  }, [search, currentPage, price]);
 
   return (
     <section className="productlist">

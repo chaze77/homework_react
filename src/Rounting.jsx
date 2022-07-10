@@ -5,9 +5,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contacts";
 import Cart from "./pages/Cart";
-// import NotFound from "./pages/NotFound";
+
 import AddProduct from "./pages/AddProduct";
-import ProductCard from "./components/ProductCard/ProductCard";
+import ProductCard from "./pages/ProductCard";
 import ProductsList from "./pages/ProductList";
 import EditProduct from "./pages/EditProduct";
 import Details from "./pages/Details";
@@ -30,3 +30,4 @@ const Routing = () => {
 };
 
 export default Routing;
+

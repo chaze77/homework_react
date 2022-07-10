@@ -3,73 +3,103 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { productsContext } from "../Context/ProductsContext";
 
-
 const AddProduct = () => {
-    const {createProduct} = useContext(productsContext)
-    const navigate = useNavigate();
+  const { createProduct } = useContext(productsContext);
+  const navigate = useNavigate();
 
-    const [title, setTitle] = useState("");
-    const [price, setPrice] = useState("");
-    const [description, setDescription] = useState("");
-    const [image, setImage] = useState("");
-  
-    function handleSave() {
-      const newProduct = {
-        title,
-        description,
-        price,
-        image,
-      };
-      if (!title.trim() || !description.trim() || !image.trim() || !price) {
-        alert("Заполните поля!");
-      } else {
-        createProduct(newProduct);
-        navigate("/list");
-      }
+  const [title, setTitle] = useState("");
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
+  const [image, setImage] = useState("");
+
+  function handleSave() {
+    const newProduct = {
+      title,
+      description,
+      price,
+      image,
+    };
+    if (!title.trim() || !description.trim() || !image.trim() || !price) {
+      alert("Заполните поля!");
+    } else {
+      createProduct(newProduct);
+      navigate("/list");
     }
+  }
 
-    return (
-        <section className="addproduct">
-           <div className="container">
-              <div className="addproduct_inp">
-                 {/* <h1>AddProduct</h1>
+  return (
+    <section className="addproduct">
+      <div className="container">
+        <div className="addproduct_inp">
+          {/* <h1>AddProduct</h1>
                  <input className='inp' type="text" placeholder='image' onChange={e => setImage(e.target.value)}/>
                  <input className='inp' type="text" placeholder='title' onChange={e => setTitle(e.target.value)}/>
                  <input className='inp' type="text" placeholder='price' onChange={e => setPrice(e.target.value)}/>
                  <input className='inp' type="text" placeholder='description' onChange={e => setDescription(e.target.value)}/>
                  
                  <button onClick={handleSave}>Save</button> */}
-                <div className="form">
-  <div className="subtitle">Let's create your product!</div>
-  <div className="input-container ic1">
-    <input id="firstname" className="input" type="text" placeholder="image"onChange={e => setImage(e.target.value)} />
-    <div className="cut"></div>
-    <label for="firstname" className="placeholder">Image</label>
-  </div>
-  <div className="input-container ic2">
-    <input id="lastname" className="input" type="text"  placeholder='title' onChange={e => setTitle(e.target.value)}/>
-    <div classNames="cut"></div>
-    <label for="lastname" className="placeholder">Title</label>
-  </div>
-  <div className="input-container ic2">
-    <input id="email" className="input" type="text" placeholder=" " onChange={e => setPrice(e.target.value)}/>
-    <div className="cut cut-short"></div>
-    <label for="email" className="placeholder">Price</label>
-  </div>
-  <div className="input-container ic2">
-  <input id="email" className="input" type="text" placeholder=" " onChange={e => setDescription(e.target.value)}/> 
-  <div className="cut"></div>           
-  <label for="lastname" className="placeholder">Description</label>
-  </div>
-  <button type="text" className="submit" onClick={handleSave}>submit</button>
-  
-</div>
+          <div className="form">
+            <div className="subtitle">Let's create your product!</div>
+            <div className="input-container ic1">
+              <input
+                id="firstname"
+                className="input"
+                type="text"
+                placeholder="image"
+                onChange={e => setImage(e.target.value)}
+              />
+              <div className="cut"></div>
+              <label for="firstname" className="placeholder">
+                Image
+              </label>
+            </div>
+            <div className="input-container ic2">
+              <input
+                id="lastname"
+                className="input"
+                type="text"
+                placeholder="title"
+                onChange={e => setTitle(e.target.value)}
+              />
+              <div classNames="cut"></div>
+              <label for="lastname" className="placeholder">
+                Title
+              </label>
+            </div>
+            <div className="input-container ic2">
+              <input
+                id="email"
+                className="input"
+                type="text"
+                placeholder=" "
+                onChange={e => setPrice(+e.target.value)}
+              />
+              <div className="cut cut-short"></div>
+              <label for="email" className="placeholder">
+                Price
+              </label>
+            </div>
+            <div className="input-container ic2">
+              <input
+                id="email"
+                className="input"
+                type="text"
+                placeholder=" "
+                onChange={e => setDescription(e.target.value)}
+              />
+              <div className="cut"></div>
+              <label for="lastname" className="placeholder">
+                Description
+              </label>
+            </div>
+            <button type="text" className="submit" onClick={handleSave}>
+              submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-              </div>
-           </div>
-        </section>
-     );
-  };
-  
- 
 export default AddProduct;
