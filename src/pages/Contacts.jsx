@@ -3,7 +3,6 @@ import React from "react";
 const Contact = () => {
   return (
     <section className="contacts">
-      <div className="invicible"></div>
       <div className="container">
         <div className="about__img">
           {" "}
@@ -20,7 +19,11 @@ const Contact = () => {
             <p>Почта: nishmankg@gmail.com</p>
           </div>
           <div className="contacts__logo">
-            <img style={{width: '30vw', height: '40vh'}} src="https://nishman.ru/wp-content/uploads/2020/11/Nishman_Logo.png" alt="" />
+            <img
+              style={{ width: "250px", height: "160px" }}
+              src="https://nishman.ru/wp-content/uploads/2020/11/Nishman_Logo.png"
+              alt=""
+            />
           </div>
         </div>
       </div>

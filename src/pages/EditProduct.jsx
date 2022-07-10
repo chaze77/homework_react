@@ -1,10 +1,8 @@
-
-import { Container, Box, Typography, TextField,Button } from "@mui/material";
+import { Container, Box, Typography, TextField, Button } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { productsContext } from "../Context/ProductsContext";
 import Loader from "./Loader";
-
 
 const EditProduct = () => {
   const { getOneProduct, oneProduct, updateProduct } =
@@ -23,10 +21,10 @@ const EditProduct = () => {
   }, []);
   useEffect(() => {
     if (oneProduct) {
-      setTitle(oneProduct.image);
-      setDescription(oneProduct.title);
+      setImage(oneProduct.image);
+      setTitle(oneProduct.title);
       setPrice(oneProduct.price);
-      setImage(oneProduct.description);
+      setDescription(oneProduct.description);
     }
   }, [oneProduct]);
 
@@ -41,19 +39,17 @@ const EditProduct = () => {
     navigate("/list");
   }
   return oneProduct ? (
-
-      
-      <Container maxWidth="sm"  className="edit__page">
-              
-      <Box  display={"flex"} flexDirection={"column"} marginTop={"150px"}>
+    <Container maxWidth="sm" className="edit__page">
+      <Box display={"flex"} flexDirection={"column"} marginTop={"150px"}>
         <Typography variant="h4">Edit product</Typography>
-        
-         <TextField
+
+        <TextField
           label="Image"
           variant="outlined"
           value={image}
-          onChange={e => setImage(e.target.value)}/>
-          <TextField
+          onChange={e => setImage(e.target.value)}
+        />
+        <TextField
           label="Title"
           variant="outlined"
           value={title}
@@ -72,7 +68,7 @@ const EditProduct = () => {
           value={description}
           onChange={e => setDescription(e.target.value)}
         />
-             
+
         <Button onClick={handleSave} variant="contained">
           Save
         </Button>

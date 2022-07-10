@@ -4,10 +4,11 @@ const About = () => {
   return (
     <section className="about">
       <div className="container">
-        <div className="invicible"></div>
-        <div className="about__img">
-          <div className="about__inner">
-            <h1>О NISHMAN</h1>
+        <div className="about_bacground">
+          <div className="about__img">
+            <div className="about__inner">
+              <h1>NISHMAN</h1>
+            </div>
           </div>
         </div>
         <div className="about__white"></div>
@@ -24,11 +25,14 @@ const About = () => {
             <video
               controls="controls"
               autoPlay
+              muted
+              loop
               className="about__main__video"
               src="https://nishman.ru/wp-content/uploads/2021/02/Nishman_Promo.mp4"></video>
           </div>
           <div className="about__right">
             <img
+              className="img__nishman_icon1"
               style={{ maxWidth: "300px", maxHeight: "200px" }}
               src="https://nishman.ru/wp-content/uploads/2020/11/Nishman_White.png"
               alt=""
@@ -44,11 +48,10 @@ const About = () => {
               <br /> весь мир».
             </span>
             <img
-              className="img_nishman_icon"
+              className="img__nishman_icon2"
               style={{
-                maxWidth: "300px",
-                maxHeight: "200px",
-                marginLeft: "100px",
+                maxWidth: "200px",
+                maxHeight: "150px",
               }}
               src="https://nishman.ru/wp-content/uploads/2020/11/Nishman_White_1.png"
               alt=""
